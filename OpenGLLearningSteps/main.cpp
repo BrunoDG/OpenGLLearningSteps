@@ -14,7 +14,8 @@
 //Include GLM
 #include <glm/glm.hpp>
 
-//include the 
+//include the shader loading function
+#include "common/Shader.hpp"
 
 GLFWwindow* window; // (In the Accompanying source code, this variable is global for simplicity)
 
@@ -60,8 +61,11 @@ int main()
 	// Set the background as a dark blue color
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
+	// This is the Vertex Array Object, which will identify our vertex array
 	GLuint VertexArrayId;
+	// Generate 1 array, put the resulting identifier in vertexArray
 	glGenVertexArrays(1, &VertexArrayId);
+	// Bind to the 'vertexarray' array'
 	glBindVertexArray(VertexArrayId);
 
 	// An Array of 3 vectors which represents 3 vertices
@@ -80,10 +84,13 @@ int main()
 	// Give our vertices to OpenGL
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 
+	// Create abd Compile our GLSL program from the shaders
+	GLuint programID = LoadShaders("shaders/SimpleVertexShader.vertexshader", "shaders/SimpleFragmentShader.fragmentshader");
+
 	do 
 	{
 		// Clear the screen. It's not mentioned before Tutorial 02, but it can cause flilckering, so it's there nonetheless
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// 1st attribute buffer: vertices
 		glEnableVertexAttribArray(0);
@@ -96,6 +103,9 @@ int main()
 			0,			// stride
 			(void*)0	// array buffer offset
 		);
+
+		// Use our shader
+		glUseProgram(programID);
 
 		// Draw the triangle, finally!
 		glDrawArrays(GL_TRIANGLES, 0, 3); // Starting from vertex 0; 3 vertices total -> 1 triangle

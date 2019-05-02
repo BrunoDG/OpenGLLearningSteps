@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Users\brunodg\Repositorios\libs\glm;D:\Users\brunodg\Repositorios\libs\glfw\include;D:\Users\brunodg\Repositorios\libs\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\brunodg\Repositorios\Vulkan\OpenGLLearningSteps\OpenGLLearningSteps\common;D:\Users\brunodg\Repositorios\Vulkan\OpenGLLearningSteps\OpenGLLearningSteps\shaders;D:\Users\brunodg\Repositorios\libs\glm;D:\Users\brunodg\Repositorios\libs\glfw\include;D:\Users\brunodg\Repositorios\libs\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions); GLEW</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -144,6 +144,7 @@
     <ClInclude Include="common\Shader.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shaders\SimpleFragmentShader.fragmentshader" />
     <None Include="shaders\SimpleVertexShader.vertexshader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

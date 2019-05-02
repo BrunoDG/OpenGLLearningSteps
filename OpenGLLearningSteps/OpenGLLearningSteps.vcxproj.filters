@@ -29,5 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\SimpleVertexShader.vertexshader" />
+    <None Include="shaders\SimpleFragmentShader.fragmentshader" />
   </ItemGroup>
 </Project>
