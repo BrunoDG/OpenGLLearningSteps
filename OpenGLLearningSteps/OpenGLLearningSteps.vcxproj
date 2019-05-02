@@ -23,6 +23,7 @@
     <ProjectGuid>{62465EC6-7714-415D-B030-75915332F255}</ProjectGuid>
     <RootNamespace>OpenGLLearningSteps</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>OpenGLLearningSteps 1 - Triangle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
