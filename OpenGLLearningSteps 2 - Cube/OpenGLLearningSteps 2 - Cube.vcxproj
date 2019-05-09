@@ -76,9 +76,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Users\brunodg\Repositorios\Vulkan\OpenGLLearningSteps\OpenGLLearningSteps 2 - Cube\shaders;D:\Users\brunodg\Repositorios\Vulkan\OpenGLLearningSteps\OpenGLLearningSteps 2 - Cube\common;D:\Users\brunodg\Repositorios\libs\glm;D:\Users\brunodg\Repositorios\libs\glfw\include;D:\Users\brunodg\Repositorios\libs\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\Users\brunodg\Repositorios\libs\glfw\lib-vc2015;D:\Users\brunodg\Repositorios\libs\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -123,6 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="common\Shader.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\SimpleTransform.vertexshader" />
+    <None Include="shaders\SimpleVertexShader2.vertexshader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\Shader.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
