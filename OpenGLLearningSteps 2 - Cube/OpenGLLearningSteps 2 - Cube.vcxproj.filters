@@ -23,10 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\SimpleTransform.vertexshader">
+    <None Include="shaders\ColorFragmentShader.fragmentshader">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="shaders\SimpleVertexShader2.vertexshader">
+    <None Include="shaders\TransformVertexShader.vertexshader">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

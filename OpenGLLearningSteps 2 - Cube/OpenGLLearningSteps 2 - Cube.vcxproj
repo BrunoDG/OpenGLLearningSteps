@@ -131,8 +131,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\SimpleTransform.vertexshader" />
-    <None Include="shaders\SimpleVertexShader2.vertexshader" />
+    <None Include="shaders\ColorFragmentShader.fragmentshader" />
+    <None Include="shaders\TransformVertexShader.vertexshader" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\Shader.hpp" />

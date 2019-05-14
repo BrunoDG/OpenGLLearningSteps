@@ -169,7 +169,7 @@ int main()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
 
 	// Create abd Compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("shaders/SimpleTransform.vertexshader", "shaders/SimpleFragmentShader.fragmentshader");
+	GLuint programID = LoadShaders("shaders/TransformVertexShader.vertexshader", "shaders/ColorFragmentShader.fragmentshader");
 
 	// translate the matrix
 	//glm::mat4 myMatrix = glm::translate(glm::mat4(), glm::vec3(10.0f, 0.0f, 0.0f));
